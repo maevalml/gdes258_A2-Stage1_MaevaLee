@@ -22,7 +22,7 @@ client.getEntry(id).then(function (entry) {
     var contentDiv = document.createElement('div'); //create new div
         contentDiv.classList.add('content');
             var mainImage = document.createElement('img');
-            mainImage.classList.add('main-image');
+            mainImage.classList.add('details-image');
             if (entry.fields.mainImage){
                 mainImage.src = entry.fields.mainImage.fields.file.url;
             }
