@@ -1,0 +1,249 @@
+img {
+    width: 15rem;
+}
+
+body{
+    margin: 1rem;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+nav {
+    margin: auto;
+    max-width: 70rem;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+#menu {
+    display: flex; /*bring them next to each other*/
+    gap: 1.25rem;
+    list-style-type:none; /*get rid of the dots*/
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 1rem;
+    color: white;
+    border: none;
+}
+
+#menu.active {
+    display: flex;
+}
+
+.hero{
+    background-image: url(../images/hero1.jpg);
+    min-height: 23rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1{
+    color: white;
+    font-size: 2rem;
+}
+
+.title h2{
+    justify-content: center;
+    display: flex;
+}
+.products-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:1rem;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.shop h2{
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+
+h1, h2, h3, h4, p{
+    color: white;
+}
+
+.main-image {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+}
+
+.description-price {
+    margin: 5rem 5rem ;
+}
+
+#product {
+    margin: auto;
+}
+
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: repeat(auto, 12.5rem);
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.gallery-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border: solid var(--light-color) 0.625rem;
+    box-sizing: border-box;
+}
+
+.about {
+    padding: 5rem;
+}
+
+.about h2{
+    display: flex;
+    justify-content: center;
+}
+
+.about p{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+footer ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*really large screens*/
+@media screen and (min-width: 70rem) {
+    .hero{
+        min-height: 24rem;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .products-gallery{
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        
+    }
+}
+
+/*desktop screens*/
+@media screen and (max-width: 48rem){
+    .main-image {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .description-price{
+        margin: 0;
+        padding: 0;
+    }
+
+    .products-gallery{
+        grid-template-columns: 1fr 1fr ;
+        
+    }
+}
+
+/*mobile screens*/
+@media screen and (max-width:30rem){
+    .hero{
+        min-height: 18rem;
+    }
+
+    .hero h1{
+        font-size: 1.5rem;
+    }
+
+    .main-image {
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+    }
+
+    .about {
+        padding: 0.5rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .about h2{
+        font-size: 1rem;
+    }
+
+    .about p{
+        font-size: 16px;
+    }
+
+    .products-gallery{
+        grid-template-columns: 1fr ;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .description-price{
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu-toggle {
+        display: block;
+        color: white;
+        background-color: rgb(0, 0, 0);
+    }
+    #menu {
+        display: none;
+        flex-direction: column; /*make it a column when in phone*/
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+}
